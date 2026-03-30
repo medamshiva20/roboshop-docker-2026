@@ -44,6 +44,13 @@ services:
    - cart
    - mysql
 
+ rabbitmq:
+  image: rabbitmq:3
+  environment:
+   RABBITMQ_DEFAULT_USER: roboshop
+   RABBITMQ_DEFAULT_PASSWORD: roboshop123
+  container_name: rabbitmq
+
  frontend:
   build: ./frontend
   image: sivamedam/frontend:1.0.0
@@ -54,6 +61,7 @@ services:
    - catalogue
    - user
    - cart
+   - shipping
 
 networks:
  default:

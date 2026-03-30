@@ -41,3 +41,9 @@ services:
    - catalogue
    - user
    - cart
+
+network:
+ default:
+  driver: bridge
+  name: roboshop
+  external: false # if true, you need to create network manually

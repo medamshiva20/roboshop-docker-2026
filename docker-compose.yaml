@@ -1,5 +1,12 @@
 services:
  mongodb:
-  build: ./mongodb
-  image: sivamedam/mongodb:1.0.0
+  build: ./mongodb # it moves to mongodb directory
+  image: sivamedam/mongodb:1.0.0 # docker build -t joindevops/mongodb:1.0.0 .
   container_name: mongodb
+ 
+ catalogue:
+  build: ./catalogue
+  image: sivamedam/catalogue:1.0.0
+  container_name: catalogue
+  depends_on:
+   - mongodb

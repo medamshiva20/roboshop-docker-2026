@@ -30,3 +30,14 @@ services:
   depends_on:
    - redis 
    - catalogue
+
+ frontend:
+  build: ./frontend
+  image: sivamedam/frontend:1.0.0
+  container_name: frontend
+  ports:
+   - 8080:80
+  depends_on:
+   - catalogue
+   - user
+   - cart

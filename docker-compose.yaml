@@ -22,3 +22,11 @@ services:
   depends_on:
    - redis
    - mongodb
+
+ cart:
+  build: ./cart
+  image: sivamedam/cart:1.0.0
+  container_name: cart
+  depends_on:
+   - redis 
+   - catalogue

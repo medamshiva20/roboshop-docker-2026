@@ -42,7 +42,7 @@ services:
    - user
    - cart
 
-network:
+networks:
  default:
   driver: bridge
   name: roboshop

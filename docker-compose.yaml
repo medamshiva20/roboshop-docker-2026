@@ -38,7 +38,11 @@ services:
 
  shipping:
   build: ./shipping
-  image: 
+  image: sivamedam/shipping:1.0.0
+  container_name: shipping
+  depends_on:
+   - cart
+   - mysql
 
  frontend:
   build: ./frontend

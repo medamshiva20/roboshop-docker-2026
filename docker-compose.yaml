@@ -36,6 +36,10 @@ services:
   image: sivamedam/mysql:1.0.0
   container_name: mysql
 
+ shipping:
+  build: ./shipping
+  image: 
+
  frontend:
   build: ./frontend
   image: sivamedam/frontend:1.0.0
